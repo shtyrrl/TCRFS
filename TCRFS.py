@@ -2,15 +2,7 @@
 import numpy as np
 import skfeature.utility.entropy_estimators as ees
 
-X = np.random.randint(0, 2, 200)
-X.shape = 10, 20
-y = np.random.randint(0, 2, 20)
-y.shape = 10, 2
-
-n_simple , n_feature = X.shape
-print("X is :" +str(X))
-print("y is :"+str(y))
-def DCLC(data,labels,n_features):
+def TCRFS(data,labels,n_features):
     """
     fi=candidate feature  Y=[l1,l2,..lm] f_selected=S(selected subset)
     J=sum(I(fi;lj)+sum[sum(I(f_selected;lj|fi))-sum[sum(I(fi;f_selected;lj))]
@@ -56,4 +48,4 @@ def DCLC(data,labels,n_features):
         f_select=data[:,idx]
     return F
 
-print (DCLC(X,y,20))
+print (TCRFS(X,y,20))
