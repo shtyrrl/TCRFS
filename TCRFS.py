@@ -48,4 +48,3 @@ def TCRFS(data,labels,n_features):
         f_select=data[:,idx]
     return F
 
-print (TCRFS(X,y,20))
